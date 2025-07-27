@@ -58,13 +58,16 @@ class CameraApp:
 
     def update_frame(self):
         frame = self.picam2.capture_array()
-        img = Image.fromarray(frame)
-        img = img.resize((self.root.winfo_width(), self.root.winfo_height() - 100))
+        img = Image.fromarray(frame[..., ::-1])  # Fix color: RGB to BGR
+        width = self.root.winfo_width() or 800
+        height = (self.root.winfo_height() - 100) or 480
+        img = img.resize((width, height))
         imgtk = ImageTk.PhotoImage(image=img)
         self.canvas.imgtk = imgtk
         self.canvas.configure(image=imgtk)
         self.current_frame = frame
         self.root.after(30, self.update_frame)
+
 
     def take_photo(self):
         countdown = tk.Toplevel(self.root)

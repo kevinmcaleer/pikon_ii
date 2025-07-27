@@ -54,7 +54,7 @@ class CameraApp:
                                   bd=0, highlightthickness=0, relief="flat", bg="black", activebackground="black")
         self.btn_quit.pack(side="left", fill="x", expand=True)
 
-        self.update_frame()
+        self.root.after(100, self.update_frame)
 
     def update_frame(self):
         frame = self.picam2.capture_array()

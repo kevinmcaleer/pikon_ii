@@ -1,5 +1,5 @@
 [Desktop Entry]
 Type=Application
 Name=Camera App
-Exec=python3 /home/kev/pikon_ii/camera_app.py
+Exec=/home/pi/venv/bin/python /home/pi/camera_app.py
 StartupNotify=false

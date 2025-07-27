@@ -43,15 +43,15 @@ class CameraApp:
         self.button_frame.pack(side="bottom", fill="x")
 
         self.btn_photo = tk.Button(self.button_frame, image=self.icons["photo"], command=self.take_photo,
-                                   bd=0, highlightthickness=0, relief="flat", bg="black", activebackground="black")
+                                   bd=0, highlightthickness=0, relief="flat", bg="white", activebackground="white")
         self.btn_photo.pack(side="left", fill="x", expand=True)
 
         self.btn_gallery = tk.Button(self.button_frame, image=self.icons["gallery"], command=self.show_gallery,
-                                     bd=0, highlightthickness=0, relief="flat", bg="black", activebackground="black")
+                                     bd=0, highlightthickness=0, relief="flat", bg="white", activebackground="white")
         self.btn_gallery.pack(side="left", fill="x", expand=True)
 
         self.btn_quit = tk.Button(self.button_frame, image=self.icons["quit"], command=self.quit,
-                                  bd=0, highlightthickness=0, relief="flat", bg="black", activebackground="black")
+                                  bd=0, highlightthickness=0, relief="flat", bg="white", activebackground="white")
         self.btn_quit.pack(side="left", fill="x", expand=True)
 
         self.root.after(100, self.update_frame)
